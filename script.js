@@ -21,6 +21,11 @@ function userPlay() {
     case "3":
       userChoice = "scissors";
       break;
+    case null:
+      userChoice = null;
+      break;
+    default:
+      userChoice = "Invalid option";
   }
   return userChoice;
 }
@@ -71,26 +76,35 @@ function messages(computer, user, result) {
 function start() {
   user = userPlay();
   if (user !== null) {
+    if (user === "Invalid option") {
+      alert("Invalid option");
+      start();
+    }
     initialMessages();
     game();
-
-    while (contComputer < 3 && contUser < 3) {
-      user = userPlay();
-      if (user !== null) {
-        console.log("+++++++++++++++++ Other round +++++++++++++++++");
-        game();
-      } else {
-        console.log("The game has finished before");
-        break;
-      }
-    }
-
+    bucle();
     winnercont(contComputer, contUser);
   } else {
     console.log("The game has finished before");
   }
 }
 
+function bucle() {
+  while (contComputer < 3 && contUser < 3) {
+    user = userPlay();
+    if (user !== null) {
+      console.log("+++++++++++++++++ Other round +++++++++++++++++");
+      if (user === "Invalid option") {
+        alert("Invalid option");
+        bucle();
+      }
+      game();
+    } else {
+      console.log("The game has finished before");
+      break;
+    }
+  }
+}
 function initialMessages() {
   console.log("Welcome to Rock, Paper, Scissors game");
   console.log("The first player who wins 3 rounds is the winner");
