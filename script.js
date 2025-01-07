@@ -7,30 +7,26 @@ function computerPlay() {
 }
 
 function userPlay() {
-  let userChoice = prompt("Choose rock, paper or scissors");
+  let userChoice = prompt("Choose rock (1), paper (2) or scissors (3)");
   return userChoice;
 }
 
 function rules(computer, user) {
-  const point_1 = "computer";
-  const point_2 = "user";
-  if (computer === "rock" && user === "paper") {
-    return point_1;
-  } else if (computer === "rock" && user === "scissors") {
+  const point_1 = "Computer";
+  const point_2 = "User";
+  if (computer === "rock" && user === 2) {
     return point_2;
-  } else if (computer === "paper" && user === "rock") {
+  } else if (computer === "rock" && user === 3) {
     return point_1;
-  } else if (computer === "paper" && user === "scissors") {
-    return point_2;
-  } else if (computer === "scissors" && user === "rock") {
-    return point_2;
-  } else if (computer === "scissors" && user === "paper") {
+  } else if (computer === "paper" && user === 1) {
     return point_1;
+  } else if (computer === "paper" && user === 3) {
+    return point_2;
+  } else if (computer === "scissors" && user === 2) {
+    return point_1;
+  } else if (computer === "scissors" && user === 1) {
+    return point_2;
   } else {
-    return "draw";
+    return computer;
   }
 }
-
-console.log(rules("rock", "paper"));
-console.log(rules("paper", "paper"));
-console.log(rules("paper", "scissors"));
