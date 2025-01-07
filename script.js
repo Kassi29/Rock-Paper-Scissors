@@ -67,3 +67,46 @@ function messages(computer, user, result) {
   console.log(`User choose: ${user}`);
   console.log(`${result} wins this round`);
 }
+
+function start() {
+  user = userPlay();
+  if (user !== null) {
+    initialMessages();
+    game();
+
+    while (contComputer < 3 && contUser < 3) {
+      user = userPlay();
+      if (user !== null) {
+        console.log("+++++++++++++++++ Other round +++++++++++++++++");
+        game();
+      } else {
+        console.log("The game has finished before");
+        break;
+      }
+    }
+
+    winnercont(contComputer, contUser);
+  } else {
+    console.log("The game has finished before");
+  }
+}
+
+function initialMessages() {
+  console.log("Welcome to Rock, Paper, Scissors game");
+  console.log("The first player who wins 3 rounds is the winner");
+  console.log("First round");
+}
+
+function winnercont(contComputer, contUser) {
+  console.log("///// Final Result /////");
+  if (contComputer > contUser) {
+    console.log("Computer wins!!!");
+  } else if (contComputer < contUser) {
+    console.log("User wins!!!");
+  } else {
+    console.log("It's a draw!!!");
+    console.log("Computer: " + contComputer + " - User: " + contUser);
+  }
+}
+
+start();
