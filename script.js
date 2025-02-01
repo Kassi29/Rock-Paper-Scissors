@@ -123,4 +123,4 @@ function winnercont(computerScore, humanScore) {
   }
 }
 
-start();
+//start();
