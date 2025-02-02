@@ -1,35 +1,25 @@
-# Rock, Paper, Scissors Game
+# Rock, Paper, Scissors Game (with UI)
 
-This is a simple implementation of the **Rock, Paper, Scissors** game where the user competes against the computer. The game keeps track of the scores for both players and announces the winner once either the computer or the user wins 5 rounds.
-
----
+This is a modern implementation of the classic Rock, Paper, Scissors game, where you compete against the computer in a fun and interactive user interface. The game keeps track of the scores for both players and announces the winner once either the computer or the player wins 3 rounds.
 
 ## Features
 
-- Choose **rock**, **paper**, or **scissors** by entering 1, 2, or 3.
-- The game continues until either the user or the computer wins 5 rounds.
-- The game announces the winner at the end and shows the final score.
-
----
+- **Interactive UI**: Choose rock, paper, or scissors by clicking on buttons.
+- **Real-time Feedback**: The game shows the result of each round and updates the score.
+- **Winner Announcement**: The game announces the winner once either the computer or player wins 3 rounds.
+- **Restart Option**: After each game, you can restart by clicking the "Restart" button.
+- **Responsive Design**: The layout adjusts for different screen sizes for a seamless experience.
 
 ## How to Play
 
-1. Upon starting the game, you will be prompted to choose between **rock**, **paper**, or **scissors**:
-   - **1** for rock
-   - **2** for paper
-   - **3** for scissors
-2. The computer will make its choice randomly.
-3. The game will display the result of the round and keep track of the scores.
-4. The first player to reach 5 wins is declared the overall winner.
-5. If you enter an invalid option, you will be asked to choose again.
+1. Upon starting the game, you will see buttons for **Rock**, **Paper**, and **Scissors**.
+2. Click on one of the buttons to choose your move.
+3. The computer will randomly make its choice, and the round result will be displayed.
+4. The game will keep track of the score. The first player to reach **3 points** wins.
+5. If the game ends, you will be presented with a winner message. You can restart the game by clicking the "Restart" button.
 
----
+## Running the Game
 
-## Run the Game
-
-### In Your Browser
-
-You can play the game directly in your browser by visiting [this link](https://kassi29.github.io/Rock-Paper-Scissors/).
 
 ### In Your Local Environment
 
@@ -39,13 +29,14 @@ To run the game locally:
    ```bash
    git clone https://github.com/kassi29/Rock-Paper-Scissors.git
    ```
-2. Open the `index.html` file in your web browser.
-3. Play the game directly in the browser console.
 
----
+2. Open the `index.html` file in your web browser.
+
+3. Play the game directly in your browser!
 
 ## Technologies Used
 
-- **JavaScript**: For game logic.
-- **HTML/CSS**: For basic structure and styling.
+- **JavaScript**: For game logic and DOM manipulation.
+- **HTML/CSS**: For structure and styling.
+- **Font Awesome**: For icons representing Rock, Paper, and Scissors.
 
