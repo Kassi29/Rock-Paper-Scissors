@@ -12,30 +12,32 @@
     />
   </head>
   <body>
-    <div>
-      <h1>Welcome to Rock-Paper-Scissors</h1>
-    </div>
+    <div class="all" id="all">
+      <div>
+        <h1>Welcome to Rock-Paper-Scissors</h1>
+        <h3>First to get 3 points wins!</h3>
+        <br />
+      </div>
 
-    <h2>Puntation:</h2>
-    <div>
-      <h2>Computer vs You</h2>
-      <p id="puntation" class="puntation">0 : 0</p>
-      <p>Make your choice!!</p>
-    </div>
+      <div>
+        <h2>COMPUTER vs YOU HUMAN</h2>
+        <p id="puntation" class="puntation">0 : 0</p>
+        <p>Make your choice!!</p>
+      </div>
 
-    <div id="buttons">
-      <button id="papper" class="fas fa-hand-paper">.Papper</button>
-      <button id="rock" class="fas fa-hand-rock">.Rock</button>
-      <button id="scissors" class="fas fa-hand-scissors">.Scissors</button>
-    </div>
+      <div id="buttons">
+        <button id="papper" class="fas fa-hand-paper">.Papper</button>
+        <button id="rock" class="fas fa-hand-rock">.Rock</button>
+        <button id="scissors" class="fas fa-hand-scissors">.Scissors</button>
+      </div>
 
-    <div class="results" id="results">
-      <span>Here should appeard the choices</span>
-    </div>
+      <div class="results" id="results"></div>
 
-    <div>
-      <button>Restart</button>
+      <div>
+        <button id="restart">Restart</button>
+      </div>
     </div>
+    <div id="winner"></div>
     <script src="/script.js"></script>
   </body>
 </html>
